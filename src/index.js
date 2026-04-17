@@ -63,16 +63,25 @@ const threeContacts = contacts.splice(0, 3);
   // ITERATION 2 - Delete Buttons
   
   // Your code goes here ...
+  const deleteButtons = document.querySelectorAll(".btn-delete");
+  deleteButtons.forEach((button) => {
+    button.onclick = function () {
+      const row = button.parentElement.parentElement;
+      row.remove();
+    };
+  });
   
-  
-
   // ITERATION 3 - Like Buttons
 
   // Your code goes here ...
-
+  const likeButtons = document.querySelectorAll(".btn-like");
+  likeButtons.forEach((button) => {
+    button.onclick = function () {
+      button.classList.toggle("selected");
+    };
+  });
   
   
-
 
 // Bonus: ITERATION 4 - Add Random Contacts
 
